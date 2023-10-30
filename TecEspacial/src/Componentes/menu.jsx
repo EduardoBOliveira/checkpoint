@@ -1,29 +1,19 @@
+import { MenuBarra, LinkMenu } from '../Estilos/Estilo';
 
-function menu() {
-    const menu = {
-        background: 'red',
-        display: 'flex',
-        justifyContent: 'center'
-    }
-    const link = {
-        display: 'inlineBlock',
-        textDecoration: 'none',
-        padding: '20px',
-        color: '#fff',
-        fontSize: '15px'
-    }
-    return (
-        <>
-            <nav style={menu}>
-                <ul style={{ display: 'flex', listStyle: 'none' }}>
-                    <li><a href="/" style={link}>HOME</a>  </li>
-                    <li><a href="/listacarros" style={link}>LISTA CARROS</a>  </li>
-                    <li><a href="/sobre"style={link} >SOBRE</a>  </li>
-                    <li><a href="/cep"style={link} >CEP</a>  </li>
-                </ul>
-            </nav>
-        </>
-    )
-
+function Menu() {
+  return (
+    <MenuBarra>
+      <ul style={{ display: 'flex', listStyle: 'none' }}>
+        <li><LinkMenu a href="/">HOME</LinkMenu></li>
+        <li><LinkMenu a href="/contato">CONTATO</LinkMenu></li>
+        <li><LinkMenu a href="/sobre">SOBRE</LinkMenu></li>
+        <li><LinkMenu a href="/tema">TEMA</LinkMenu></li>
+      </ul>
+    </MenuBarra>
+  );
 }
-export default menu;
+
+export default Menu;
+
+
+
